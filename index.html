@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>maplibre</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>MapLibreGL</title>
+    
+    
+    <script src="https://unpkg.com/maplibre-gl@^5.1.1/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@^5.1.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+  </head>
+  <body>
+     <div class="header">Carte de Rennes</div>
+     <div id="menubasemap">
+       
+      <label for="style-selector">Choisir un fond de carte :</label>
+      <select id="style-selector">
+          <option value="https://openmaptiles.geo.data.gouv.fr/styles/positron/style.json">Positron</option>
+          <option value="https://openmaptiles.geo.data.gouv.fr/styles/dark-matter/style.json">Dark</option>
+          <option value="https://openmaptiles.geo.data.gouv.fr/styles/osm-bright/style.json">Streets</option>
+          <option value="https://openmaptiles.geo.data.gouv.fr/styles/maptiler-toner/style.json">Toner</option>
+      </select>
+       <hr>
+              <div>
+                <button id='Gare'>Quartier Gare-Centre</button>
+                <button id='Rennes1'>Université Rennes 1</button>
+                <button id='Rennes2'>Université Rennes 2</button>
+              </div>
+    </div>
+      
+    <div id='map'></div>
+    
+    <div class='menu'>
+    <div class='menu_overlay'>
+    <hr>
+       <fieldset>
+       <label class="categoryLabel">Données Réferentielles</label>
+
+         <div>
+          <input type="checkbox" id="RoutesCB" value="Routes" onchange="switchlayer('Routes')" checked/>
+                    <label for="RoutesCB">Routes</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="hydrologieCB" value="hydrologie" onchange="switchlayer('hydrologie')" checked/>
+                    <label for="hydrologieCB">Hydrologie</label>
+                </div>
+         
+                <div>
+                    <input type="checkbox" id="batimentsCB" value="batiments" onchange="switchlayer('batiments')" />
+                    <label for="batimentsCB">Bâtiments</label>
+                </div>
+         
+                <div>
+                    <input type="checkbox" id="ContourcommuneCB" value="Contourcommune" onchange="switchlayer('Contourcommune')" />
+                    <label for="ContourcommuneCB">Contour de commune</label>
+                </div>
+         
+            </fieldset>
+
+          <hr>
+
+            <fieldset>
+                <label class="categoryLabel">Données métier</label>
+                <div>
+                    <input type="checkbox" id="ParcrelaisCB" value="Parcrelais" onchange="switchlayer('Parcrelais')" checked/>
+                    <label for="ParcrelaisCB">Parcs Relais</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="CadastreCB" value="Cadastre" onchange="switchlayer('Cadastre')" />
+                    <label for="CadastreCB">Parcelles cadastrales</label>
+                </div>
+              <div>
+                    <input type="checkbox" id="BusCB" value="Bus" onchange="switchlayer('Bus')" />
+                    <label for="BusCB">Arrêts de bus</label>
+                </div>
+              <div>
+                    <input type="checkbox" id="PLUCB" value="PLU" onchange="switchlayer('PLU')" />
+                    <label for="PLUCB">PLUI</label>
+                </div>
+              <div>
+                    <input type="checkbox" id="VLSCB" value="VLS" onchange="switchlayer('VLS')" />
+                    <label for="VLSCB">Station de Vélo</label>
+                </div>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <label class="categoryLabel">Autres</label>
+                <div>
+                    <input type="checkbox" id="clubCB" value="club" onchange="switchlayer('club')" />
+                    <label for="clubCB">Boîte de nuit</label>
+                </div>
+                           
+            </fieldset>
+        </div>
+    </div>
+  </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

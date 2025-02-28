@@ -1,0 +1,87 @@
+#map {
+  position:absolute;
+  top:50px; 
+  bottom:0; 
+  width:100%;
+}
+
+/* Style du bandeau */
+.header {
+  background: linear-gradient(135deg, #0073e6, #00aaff);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  margin: 0;
+  border: none; /* Supprime toute bordure */
+  box-shadow: none; /* Supprime l'ombre */
+}
+
+#menubasemap {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  background: white;
+  padding: 10px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 0 10px;
+  rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.MypopupPR .maplibregl-popup-content {
+  background: #ffffff; /* Fond blanc classique */
+  color: #202124; /* Gris foncé utilisé par Google */
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Ombre légère et élégante */
+  max-width: 280px; /* Largeur limitée pour une apparence compacte */
+}
+
+.MypopupVelo .maplibregl-popup-content {
+  background-color: pink;
+  color : white;
+  opacity : 0.7;
+}
+
+.MypopupBus .maplibregl-popup-content {
+  background-color: blue;
+  color : white;
+  opacity : 0.7;
+}
+
+.menu {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 200px;
+  top: 0px;
+  right: 30px;
+  padding: 10px;
+}
+
+.menu .menu_overlay {
+  background-color: #fff;
+  box-shadow:0 1px 2px rgba(0, 0, 0, 0.10);
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.menu_overlay fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.menu_overlay .categoryLabel {
+  display: block;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
